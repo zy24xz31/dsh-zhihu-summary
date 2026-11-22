@@ -1,0 +1,93 @@
+{
+  "name": "dsh-zhihu-summary",
+  "version": "0.3.1",
+  "description": "DSH Zhihu assistant plugin (vibe-coded, read/search/comments/collections/drafts/images)",
+  "license": "MIT",
+  "author": "zy24xz31",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zy24xz31/dsh-zhihu-summary.git"
+  },
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "知乎总结",
+      "en": "Zhihu Digest"
+    },
+    "icon": "summary",
+    "wants": [
+      "clipboard"
+    ],
+    "contributes": {
+      "composer.tools": [
+        {
+          "id": "open-digest",
+          "label": {
+            "zh": "知乎总结",
+            "en": "Zhihu"
+          },
+          "icon": "summary",
+          "panel": "zhihu-digest"
+        }
+      ],
+      "panels": [
+        {
+          "id": "zhihu-digest",
+          "title": {
+            "zh": "知乎总结",
+            "en": "Zhihu Digest"
+          },
+          "icon": "summary",
+          "placement": [
+            "chat.panel",
+            "plugin",
+            "session.tab",
+            "features"
+          ],
+          "presentation": "sheet"
+        },
+        {
+          "id": "zhihu-account",
+          "title": {
+            "zh": "知乎账号",
+            "en": "Zhihu Account"
+          },
+          "icon": "user",
+          "placement": [
+            "plugin",
+            "session.tab",
+            "features"
+          ],
+          "presentation": "page"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  }
+}
