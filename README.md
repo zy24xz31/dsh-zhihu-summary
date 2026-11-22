@@ -1,6 +1,6 @@
 # dsh-zhihu-summary (v0.3.1)
 
-基于本机知乎登录态的 DSH（DeepSeek Harness）非官方知乎插件：支持在手机原生界面（dsh-go）、网页版工作台以及 Windows / macOS / Linux 桌面环境使用，可让 AI 辅助完成内容总结、正文与评论区看图、搜索、查答主、管理收藏夹与起草回答/文章草稿。
+基于本机知乎登录态的 DSH（DeepSeek Harness）非官方知乎总结插件：支持在手机原生界面（ccch1mneyyy/dsh-Go）、网页版工作台以及 Windows / macOS / Linux 桌面环境使用，可让 AI 辅助完成内容总结、正文与评论区看图、搜索、查答主、管理收藏夹与起草回答/文章草稿。
 
 > ## ⚠️ 重要声明与使用警告（请务必阅读）
 >
@@ -23,7 +23,7 @@
 | `zhihu_read_url` | 读取单个知乎链接正文、配图索引（最多 300 张）与高赞评论（支持 `withImages` 临时开关） |
 | `zhihu_download_images` | 按需下载知乎正文/评论区配图（仅放行 `*.zhimg.com`）到本机临时缓存，供 `read_image` 视觉读图 |
 | `zhihu_collections` | 列出收藏夹，或分页读取收藏夹内容 |
-| `zhihu_manage_collection` | 批量添加 / 取消收藏（内置 2.4~3.8 秒防风控随机间隔） |
+| `zhihu_manage_collection` | 批量添加 / 取消收藏（2.4~3.8 秒随机间隔） |
 | `zhihu_comments` | 读取回答、文章、想法、问题的评论区（含评论配图与楼中楼子回复） |
 | `zhihu_search` | 按关键词搜索回答、文章与问题 |
 | `zhihu_member` | 读取用户主页简介、获赞统计、真实动态流与代表作 |
