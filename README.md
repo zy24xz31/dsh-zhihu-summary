@@ -1,4 +1,4 @@
-# dsh-zhihu-summary (v0.3.1)
+# dsh-zhihu-summary (v0.3.2)
 
 基于本机知乎登录态的 DSH（DeepSeek Harness）极简非官方知乎总结插件：支持在手机原生界面（ccch1mneyyy/dsh-Go）、网页版工作台以及 Windows / macOS / Linux 桌面环境使用，可让 AI 辅助完成内容总结、正文与评论区看图、搜索、查答主、管理收藏夹与起草回答/文章草稿。
 
@@ -20,11 +20,11 @@
 | `zhihu_home_digest` | 主页推荐前 N 条非付费内容（含配图索引） |
 | `zhihu_hot_digest` | 热榜问题 + 每题多个高赞回答 |
 | `zhihu_evaluate` | 评估收藏夹 / 专栏 / 盐选作品是否值得读 |
-| `zhihu_read_url` | 读取单个知乎链接正文、配图索引（最多 300 张）与高赞评论（支持 `withImages` 临时开关） |
+| `zhihu_read_url` | 读取单个知乎链接正文、配图索引（最多 300 张）与高赞评论（含评论 ID 与回复数，可直接跳转展开楼中楼；支持 `withImages` 临时开关） |
 | `zhihu_download_images` | 按需下载知乎正文/评论区配图（仅放行 `*.zhimg.com`）到本机临时缓存，供 `read_image` 视觉读图 |
 | `zhihu_collections` | 列出收藏夹，或分页读取收藏夹内容 |
 | `zhihu_manage_collection` | 批量添加 / 取消收藏（2.4~3.8 秒随机间隔） |
-| `zhihu_comments` | 读取回答、文章、想法、问题的评论区（含评论配图与楼中楼子回复） |
+| `zhihu_comments` | 读取回答、文章、想法、问题的评论区（固定每页 9 条以保留热门楼中楼预览，含配图与统一 `replyToAuthor` 对话链），或传入评论 ID（`type: "comment"`）分页展开完整楼中楼（固定每页 20 条） |
 | `zhihu_search` | 按关键词搜索回答、文章与问题 |
 | `zhihu_member` | 读取用户主页简介、获赞统计、真实动态流与代表作 |
 | `zhihu_question_answers` | 分页读取某问题下的回答列表（支持默认热度 / 最新发布排序与游标翻页） |

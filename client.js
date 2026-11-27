@@ -383,7 +383,7 @@ window.__ModuleLoader__.load({
               h('div', { 'data-lz-note': '' }, `抓取前 ${settings.homeLimit} 条非付费内容（单条上限 ${settings.homeMaxChars} 字）`),
               h('button', {
                 'data-lz-btn': 'primary',
-                onClick: () => copyPrompt(`帮我调用知乎工具总结主页推荐前${settings.homeLimit}条非付费内容。`),
+                onClick: () => copyPrompt('调用知乎工具刷一下首页，简单判断内容的价值，详细总结高价值高熵内容，可以把里边的金句或特别搞笑、离谱的事摘出来，其余的简单总结。'),
               }, '复制指令')
             ),
             h('div', { 'data-lz-card': '' },
